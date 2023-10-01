@@ -1,0 +1,72 @@
+:root{
+    --Graphite: #393939;
+    --Nitro-Blue: #5BACC3;
+    --Nitro-Pink: #FFF0ED;
+    
+}
+
+h1,h2 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+h3,.nav-heading {
+    font-size: 33px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.text__regular--italic {
+    font-style: italic;
+}
+
+.text__regular--price-tag {
+    color: var(--Nitro-Blue)
+}
+
+.nav-link {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.menu-header {
+    background-image: url(../assets/coffee-circle.jpg);
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+}
+
+.menu-header__heading {
+    width: 300px;
+    height: 200px;
+    background-color: var(--Graphite);
+    color: white;
+}
+
+.menu-header__sub-nav h2{
+    color: white;
+    background-color: var(--Graphite);
+    text-align: center;
+    margin: 0;
+}
+
+/* menu-content
+- article menu-content__hot-drinks
+    + h2 heading
+    + article items:
+        + article menu-content__hot-drinks--in-house-brew
+            - h3 heading
+            - p desc
+            - p price
+        + article menu-content__hot-drinks--espresso
+- article menu-content__cold-drinks
+    + menu-content__cold-drinks--cold-brew
+    + menu-content__cold-drinks--ice-chai-latte
+- article menu-content__pastries
+    + menu-content__pastries--bor-cookie
+    + menu-content__pastries--blt-muffin */
