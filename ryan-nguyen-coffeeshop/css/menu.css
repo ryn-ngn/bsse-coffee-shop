@@ -2,7 +2,7 @@
     --Graphite: #393939;
     --Nitro-Blue: #5BACC3;
     --Nitro-Pink: #FFF0ED;
-    
+    --Light-Gray: #f7f7f7;
 }
 
 h1,h2 {
@@ -46,6 +46,7 @@ p {
     height: 200px;
     background-color: var(--Graphite);
     color: white;
+    text-align: center;
 }
 
 .menu-header__sub-nav h2{
@@ -55,18 +56,15 @@ p {
     margin: 0;
 }
 
-/* menu-content
-- article menu-content__hot-drinks
-    + h2 heading
-    + article items:
-        + article menu-content__hot-drinks--in-house-brew
-            - h3 heading
-            - p desc
-            - p price
-        + article menu-content__hot-drinks--espresso
-- article menu-content__cold-drinks
-    + menu-content__cold-drinks--cold-brew
-    + menu-content__cold-drinks--ice-chai-latte
-- article menu-content__pastries
-    + menu-content__pastries--bor-cookie
-    + menu-content__pastries--blt-muffin */
+.menu-content__category {
+    background-color: var(--Nitro-Pink);
+}
+
+.menu-content__category:nth-of-type(odd) {
+    background-color: var(--Light-Gray);
+}
+
+.menu-content__category--heading,.menu-content__category--item--name,
+.text__regular--price-tag {
+    text-align: center;
+}
