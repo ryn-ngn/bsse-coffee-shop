@@ -1,0 +1,64 @@
+:root{
+    --Graphite: #393939;
+    --Nitro-Blue: #5BACC3;
+    --Nitro-Pink: #FFF0ED;
+    --Light-Gray: #f7f7f7;
+}
+
+h1,h2 {
+    font-size: 60px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h3,.nav-heading,.footer__heading {
+    font-size: 33px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.text__regular--italic {
+    font-style: italic;
+}
+
+.text__regular--price-tag {
+    color: var(--Nitro-Blue)
+}
+
+.icon{
+    width: 50px;
+}
+.nav-bar__nav-link a{
+    font-size: 21px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar__nav-link a:hover{
+    color: var(--Nitro-Blue);   
+}
+
+.header__nav-bar{
+    margin-bottom: 2rem;
+}
+
+.header__nav-bar{
+    background-color: var(--Nitro-Pink);
+}
+
+.header__nav-bar--element,.nav-bar__nav-link {
+    display: inline-block;
+}
+
+.nav-links {
+    padding: 0;
+}
+
+.nav-bar__nav-link {
+    padding-left: 40px;
+}
