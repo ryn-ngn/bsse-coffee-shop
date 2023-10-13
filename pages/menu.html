@@ -10,10 +10,10 @@
 </head>
 <body>
     <nav class="header__nav-bar">
-        <img class="header__nav-bar--element icon" src="../assets/coffee-beans-logo-and-footer.svg" alt="coffee bean logo"/>
+        <a href="../index.html"><img class="header__nav-bar--element nav-bar-icon" src="../assets/coffee-beans-logo-and-footer.svg" alt="coffee bean logo"/></a>
         
-        <h2 class="header__nav-bar--element nav-bar-heading">nitro</h2>
-        <ul class="header__nav-bar--element">
+        <h2 class="header__nav-bar--element nav-bar-heading"><a href="../index.html">nitro</a></h2>
+        <ul class="header__nav-bar--element nav-links">
             <li class="nav-bar__nav-link"><a href="../index.html">ABOUT</a></li>
             <li class="nav-bar__nav-link"><a href="menu.html">MENU</a></li>
             <li class="nav-bar__nav-link"><a href="menu.html">SHOP NOW</a></li>
@@ -25,14 +25,14 @@
     </section>
 
     <section class="menu-header__sub-nav">
-        <h2>Hot Drinks</h2>
-        <h2>Cold Drinks</h2>
-        <h2>Pastries</h2>
+        <h2><a href="#menu-content__hot-drinks">Hot Drinks</a></h2>
+        <h2><a href="#menu-content__cold-drinks">Cold Drinks</a></h2>
+        <h2><a href="#menu-content__pastries">Pastries</a></h2>
     </section>
 
     <section class="menu-content">
         <article class="menu-content__category hot-drinks">
-            <h2 class="menu-content__category--heading">Hot Drinks</h2>
+            <h2 id="menu-content__hot-drinks" class="menu-content__category--heading">Hot Drinks</h2>
             <article class="menu-content__category--item">
                 <h3 class="menu-content__category--item--name">In-house Brew</h3>
                 <p class="text__regular--italic">Our in-house medium roast is a classic balance between sweet vanilla, nutty hazelnut, and a smooth low acidity to bring everything together.</p>
@@ -45,7 +45,7 @@
             </article>
         </article>
 
-        <article class="menu-content__category cold-drinks">
+        <article id="menu-content__cold-drinks" class="menu-content__category cold-drinks">
             <h2 class="menu-content__category--heading">Cold Drinks</h2>
             <article class="menu-content__category--item">
                 <h3 class="menu-content__category--item--name">Cold Brew</h3>
@@ -59,7 +59,7 @@
             </article>
         </article>
 
-        <article class="menu-content__category pastries">
+        <article id="menu-content__pastries" class="menu-content__category pastries">
             <h2 class="menu-content__category--heading">Pastries</h2>
             <article class="menu-content__category--item">
                 <h3 class="menu-content__category--item--name">Bacon Oatmeal Raisin Cookie</h3>

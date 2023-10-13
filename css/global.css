@@ -55,6 +55,10 @@ p {
     display: inline-block;
 }
 
+.nav-bar-heading a {
+    text-decoration: none;
+}
+
 .nav-links {
     padding: 0;
 }
