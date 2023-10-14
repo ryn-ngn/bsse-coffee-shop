@@ -21,6 +21,10 @@ p {
     font-weight: 400;
 }
 
+button {
+    cursor: pointer;
+}
+
 .text__regular--italic {
     font-style: italic;
 }
@@ -66,3 +70,4 @@ p {
 .nav-bar__nav-link {
     padding-left: 40px;
 }
+
