@@ -5,68 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <title>Coffee Shop - Home</title>
-    <link rel="stylesheet" type="text/css" href="./css/global.css" />
-    <link rel="stylesheet" type="text/css" href="./css/landing.css" />
-
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
 </head>
 <body>
     <header>
         <nav class="header__nav-bar">
-            <a href="./index.html"><img class="header__nav-bar--element nav-bar-icon" src="./assets/coffee-beans-logo-and-footer.svg" alt="coffee bean logo"/></a>
+            <a href="./index.html"><img class="icon" src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo"/></a>
             
-            <h2 class="header__nav-bar--element nav-bar-heading"><a href="./index.html">nitro</a></h2>
-            <ul class="header__nav-bar--element nav-links">
-                <li class="nav-bar__nav-link"><a href="./index.html">ABOUT</a></li>
-                <li class="nav-bar__nav-link"><a href="./pages/menu.html">MENU</a></li>
-                <li class="nav-bar__nav-link"><a href="./pages/menu.html">SHOP NOW</a></li>
+            <h2 class="header__nav-bar--heading"><a href="./index.html">nitro</a></h2>
+            <ul class="header__nav-bar--links">
+                <li class="header__nav-bar--links--item"><a href="./index.html">ABOUT</a></li>
+                <li class="header__nav-bar--links--item"><a href="./pages/menu.html">MENU</a></li>
+                <li class="header__nav-bar--links--item"><a href="./pages/menu.html">SHOP NOW</a></li>
             </ul>
         </nav>
 
         <section class="header__info-box">
-            <h1>
-                Nitro Coffee
-            </h1>
-            <p>
-                The word “coffee” has roots in several languages. In Yemen it earned the name qahwah, which was originally a romantic term for wine. It later became the Turkish kahveh, then Dutch koffie and finally coffee in English.
-            </p>
-            <button onclick="window.location.href='./pages/menu.html';">
-                SHOP NOW
-            </button>
-            <img src="./assets/coffeebeans-hero.png" alt="coffee bag"/>
+            <div class="header__info-box--text">
+                <h1>
+                    Nitro Coffee
+                </h1>
+                <p>
+                    The word “coffee” has roots in several languages. In Yemen it earned the name qahwah, which was originally a romantic term for wine. It later became the Turkish kahveh, then Dutch koffie and finally coffee in English.
+                </p>
+                <button onclick="window.location.href='./pages/menu.html';">
+                    SHOP NOW
+                </button>
+            </div>
+            <div class="header__info-box--image">
+                <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag"/>
+            </div>
         </section>
     </header>
-    <section class="product-list">
-        <h2>Our Products</h2>
+    <body>
         
-        <div class="product-list__product-cards">
-            <article class="product-list__product-card">
-                <img class="product-list__product-card--image" src="./assets/coffeebeans.png" alt="coffee bean">
-                <h3 class="product-list__product-card--name">Coffee Beans</h3>
-                <p class="product-list__product-card--price text__regular--price-tag">$18.99</p>
-            </article>
+        <section class="product-list">
+            <h2>Our Products</h2>
+            
+            <div class="product-list__product-cards">
+                <article class="product-list__product-card">
+                    <div class="product-list__product-card--image">
+                        <img src="./assets/images/coffeebeans.png" alt="coffee bean">
+                    </div>
+                    <div class="product-list__product-card--text-content">
+                        <h3 class="product-list__product-card--name">Coffee Beans</h3>
+                        <p>Pack of 3</p>
+                        <p class="product-list__product-card--price text__regular--price-tag">$18.99</p>
+                    </div>
+                </article>
+        
+                <article class="product-list__product-card">
+                    <div class="product-list__product-card--image" >
+                        <img src="./assets/images/coldbrew.png" alt="cold brew">
+                    </div>
+                    <div class="product-list__product-card--text-content">
+                        <h3 class="product-list__product-card--name">Cold Brew</h3>
+                        <p>1 can</p>
+                        <p class="product-list__product-card--price text__regular--price-tag">$4.99</p>
+                    </div>
+                </article>
+        
+                <article class="product-list__product-card">
+                    <div class="product-list__product-card--image" >
+                        <img src="./assets/images/inhousebrew.png" alt="in-house brew">
+                    </div>
+                    <div class="product-list__product-card--text-content">
+                        <h3 class="product-list__product-card--name">In-house Brew</h3>
+                        <p>1 cup</p>
+                        <p class="product-list__product-card--price text__regular--price-tag">$2.99</p>
+                    </div>
+                </article>
+            </div>
     
-            <article class="product-list__product-card">
-                <img class="product-list__product-card--image" src="./assets/coldbrew.png" alt="cold brew">
-                <h3 class="product-list__product-card--name">Cold Brew</h3>
-                <p class="product-list__product-card--price text__regular--price-tag">$4.99</p>
-            </article>
+            <button onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
+        </section>
     
-            <article class="product-list__product-card">
-                <img class="product-list__product-card--image" src="./assets/inhousebrew.png" alt="in-house brew">
-                <h3 class="product-list__product-card--name">In-house Brew</h3>
-                <p class="product-list__product-card--price text__regular--price-tag">$2.99</p>
-            </article>
-        </div>
-
-        <button onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
-    </section>
-
-    <section class="discount-section">
-        <p class="discount-section__text discount-text-regular">
-            Get 20% off your first order with code: 
-            <span class="discount-section__text discount-text-bold">FirstNitro</span>
-        </p>
-    </section>
+        <section class="discount-section">
+            <p class="discount-section__text discount-text-regular">
+                Get 20% off your first order with code: 
+                <span class="discount-section__text discount-text-bold">FirstNitro</span>
+            </p>
+        </section>
+    </body>
 
     <footer class="footer">
         <div class="address">
@@ -88,13 +108,13 @@
         <div class="social-division">
             <h3 class="footer__heading">Social</h3>
             <a href="https://facebook.com">
-                <img class="icon" src="./assets/Facebook-Icon.svg" alt="facebook">
+                <img class="icon" src="./assets/logos/Facebook-Icon.svg" alt="facebook">
             </a>
             <a href="https://yelp.com">
-                <img class="icon" src="./assets/Yelp-Icon.svg" alt="yelp">
+                <img class="icon" src="./assets/logos/Yelp-Icon.svg" alt="yelp">
             </a>
             <a href="https://instagram.com">
-                <img class="icon" src="./assets/Instagram-Icon.svg" alt="instagram">
+                <img class="icon" src="./assets/logos/Instagram-Icon.svg" alt="instagram">
             </a>
         </div>
     </footer>
