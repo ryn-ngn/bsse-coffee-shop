@@ -1,0 +1,27 @@
+@use 'abstracts';
+
+.header__nav-bar {
+    background-color: abstracts.$color-nitro-pink;
+    a {
+        text-decoration: none;
+        &:hover {
+            color: abstracts.$color-nitro-blue;   
+        }
+    }
+
+    &--heading {
+        display: inline-block;
+    }
+
+    &--links {
+        display: inline-block;
+        padding: 0;
+        li {
+            display: inline-block;
+            font-size: 21px;
+            font-weight: 400;
+            color: black;
+            padding-left: 40px;
+        }
+   }
+}
