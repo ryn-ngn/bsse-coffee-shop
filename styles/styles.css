@@ -236,6 +236,110 @@ p {
   font-weight: bold;
 }
 
+.products {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: #f7f7f7;
+}
+.products__body {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+@media (max-width: 1030px) {
+  .products__body {
+    flex-wrap: wrap;
+  }
+}
+.products__body--product {
+  min-width: 330px;
+  min-height: 440px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 9px -1px rgb(0, 0, 0);
+  background-color: white;
+  transition: 0.5s;
+}
+@media (max-width: 1030px) {
+  .products__body--product {
+    margin: 1rem 0;
+  }
+}
+.products__body--product:hover {
+  transform: scale(1.05);
+}
+.products__body--product--image {
+  padding: 20px;
+}
+.products__body--product--image img {
+  height: 280px;
+}
+.products__body--product--info {
+  height: 160px;
+  background-color: #fff0ed;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1rem;
+}
+.products__body--product--info h3,
+.products__body--product--info p {
+  margin: 0;
+}
+.products__body--product--info :first-child {
+  text-align: left;
+}
+.products__body--product--info :nth-child(3) {
+  text-align: right;
+}
+.products__body--product--info--price p {
+  color: #5bacc3;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.products__button {
+  display: flex;
+  justify-content: center;
+}
+
+.about-our-beans {
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.about-our-beans__desc {
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+.about-our-beans__desc--icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.125rem;
+  padding-right: 1rem;
+}
+.about-our-beans__image--outer {
+  background-image: url("../assets/images/coldbrewbackground.png");
+  background-size: cover;
+}
+.about-our-beans__image--inner {
+  border: solid 5px #5bacc3;
+  position: relative;
+  top: -20px;
+  left: -20px;
+  width: 25rem;
+  height: 25rem;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+}
+
 .header__heading-container {
   background-image: url(../assets/images/coffee-circle.jpg);
   background-size: cover;
