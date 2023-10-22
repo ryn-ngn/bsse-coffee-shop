@@ -1,27 +1,32 @@
-@use 'abstracts';
+@use "abstracts";
 
 .header__nav-bar {
-    background-color: abstracts.$color-nitro-pink;
-    a {
-        text-decoration: none;
-        &:hover {
-            color: abstracts.$color-nitro-blue;   
-        }
+  background-color: abstracts.$color-nitro-pink;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: abstracts.$color-nitro-blue;
     }
+  }
+  position: relative;
 
-    &--heading {
-        display: inline-block;
+  &--heading {
+    display: inline-block;
+  }
+
+  &--links {
+    display: inline-block;
+    padding: 0;
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+    li {
+      display: inline-block;
+      font-size: 21px;
+      font-weight: 400;
+      // text-decoration: none;
+      color: black;
+      padding-left: 40px;
     }
-
-    &--links {
-        display: inline-block;
-        padding: 0;
-        li {
-            display: inline-block;
-            font-size: 21px;
-            font-weight: 400;
-            color: black;
-            padding-left: 40px;
-        }
-   }
+  }
 }

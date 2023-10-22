@@ -1,62 +1,84 @@
+@use "abstracts";
+@import "abstracts";
 
-@use 'abstracts';
-
-.menu-header {
-    background-image: url(../assets/images/coffee-circle.jpg);
-    background-size:cover;
-    background-position: center;
-    width: 100%;
-    height: 700px;
-}
-
-.menu-header__heading {
+.header__heading-container {
+  background-image: url(../assets/images/coffee-circle.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
+  @include center-flex;
+  &--heading {
     width: 300px;
     height: 200px;
     background-color: abstracts.$color-graphite;
     color: white;
-    text-align: center;
+    @include center-flex;
+    border-radius: 3rem;
+  }
 }
 
-.menu-header__sub-nav {
-    width: 100%;
-    height: 80px;
-    padding: 20px;
-    background-color: abstracts.$color-graphite;
-    text-align: center;
-    margin-bottom: 2rem;
-    min-width: 940px;
-}
-
-.menu-header__sub-nav h2{
+.header__sub-nav {
+  width: 100%;
+  height: 80px;
+  padding: 20px 0;
+  background-color: abstracts.$color-graphite;
+  text-align: center;
+  margin-bottom: 2rem;
+  @include flex-on-spacing-choice(center);
+  align-items: center;
+  h2 {
     color: white;
     margin: 0;
-    display: inline-block;
-    padding-right: 2rem;
+    padding: 0 1.5rem;
+    transition: 0.8s;
+    border-left: 4px solid abstracts.$color-nitro-blue;
+    &:hover {
+      transform: scale(1.05);
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: abstracts.$color-nitro-blue;
+      }
+      &:visited {
+        text-decoration: none;
+      }
+    }
   }
 
-  .menu-header__sub-nav h2:nth-child(n+2){
-    border-left: 4px solid abstracts.$color-nitro-blue;
-    padding-left: 2rem;
+  @media (max-width: 1065px) {
+    h2 {
+      font-size: 3rem;
     }
-
-.menu-header__sub-nav h2 a{
-    text-decoration: none;
-    color: white;
+  }
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    h2 {
+      max-width: fit-content;
+      border-left: none;
+    }
+    h2:nth-child(n + 2) {
+      border-top: 4px solid abstracts.$color-nitro-blue;
+    }
+  }
 }
 
-.menu-header__sub-nav h2 a:visited{
-    text-decoration: none;
-}
+.menu-content {
+  text-align: center;
 
-.menu-content__category {
+  &__category {
     background-color: abstracts.$color-nitro-pink;
-}
-
-.menu-content__category:nth-of-type(even) {
-    background-color: var(--Light-Gray);
-}
-
-.menu-content__category--heading,.menu-content__category--item--name,
-.text__regular--price-tag {
-    text-align: center;
+    padding: 0 20% 0 20%;
+    @media (max-width: 900px) {
+      padding: 0 10% 0 10%;
+    }
+  }
+  &__category:nth-of-type(even) {
+    background-color: abstracts.$color-light-gray;
+  }
 }

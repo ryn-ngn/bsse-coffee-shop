@@ -28,9 +28,11 @@
                 <p>
                     The word “coffee” has roots in several languages. In Yemen it earned the name qahwah, which was originally a romantic term for wine. It later became the Turkish kahveh, then Dutch koffie and finally coffee in English.
                 </p>
-                <button onclick="window.location.href='./pages/menu.html';">
-                    SHOP NOW
-                </button>
+                <div class="btn-ctn">
+                    <button onclick="window.location.href='./pages/menu.html';">
+                        SHOP NOW
+                    </button>
+                </div>
             </div>
             <div class="header__info-box--image">
                 <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag"/>
@@ -38,7 +40,6 @@
         </section>
     </header>
     <body>
-        
         <section class="products">
             <h2 class="products__heading">Our Products</h2>
             
@@ -88,10 +89,34 @@
                     </div>
                 </article>
             </div>
-    
-            <button class="products__button" onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
+            
+            <div class="products__button">
+                <div class="btn-ctn">
+                    <button onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
+                </div>
+            </div>
         </section>
-    
+        
+        <section class="about-our-beans">
+            <div class="about-our-beans__desc">
+                <h2>We're Different</h2>
+                <p>We grow and roast our own beans. Every bean, every cup, every step of the way, we strive for excellence</p>
+                <div class="about-our-beans__desc--icons">
+                    <img class="icon" src="./assets/logos/planting.svg" alt="plants icon">
+                    <img class="icon" src="./assets/logos/coffee-beans.svg" alt="beans icon">
+                    <img class="icon" src="./assets/logos/isolated-coffee-mug-outline-vector-19518812.jpg" alt="coffee mug icon">
+                </div>
+                <div class="btn-ctn">
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="about-our-beans__image--outer">
+                <div class="about-our-beans__image--inner">
+                    <img  src="./assets/images/tiltedcan.png">
+                </div>
+            </div>
+        </section>
+
         <section class="discount-section">
             <p class="discount-section__text--regular">
                 Get 20% off your first order with code: 
