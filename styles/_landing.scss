@@ -6,11 +6,22 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem 6rem;
+    @media(max-width: 1030px) {
+        padding: 2rem 2rem;
+    }
     &--text {
         width: 40vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    transition: 1s;
+    &--image {
+        &:hover {
+            animation: reverse;
+            animation-duration: 1s;
+            animation-direction: alternate-reverse;
+        }
     }
 }
 
@@ -22,66 +33,106 @@ button {
     background-color: abstracts.$color-nitro-blue;
     color: white;
     border: 0;
+    transition: 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        background-color: abstracts.$color-graphite;
+        transform: scale(1.05);
+    }
 }
 
-.product-list {
+.products {
     text-align: center;
-    margin: 2rem;
-}
-
-.product-list__product-cards {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.product-list__product-cards article{
-    min-width: 330px;
-    min-height: 440px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 9px -1px rgb(0, 0, 0, 25);
-}
-
-.product-list__product-card--image img{
-    height: 280px;
-    padding: 20px;
-}
-
-.product-list__product-card--text-content{
-    background-color: abstracts.$color-nitro-pink;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.product-list__product-card--text-content p{
-    margin: 0;
+    margin: 2rem 0;
+    .products__body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 2rem 0;
+        @media(max-width: 1030px) {
+            flex-wrap: wrap;
+        }
+        
+        &--product{
+            min-width: 330px;
+            min-height: 440px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 9px -1px rgb(0, 0, 0, 25);
+            @media(max-width: 1030px) {
+                margin: 1rem 0;
+            }
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            &--image {
+                padding: 20px;
+                img {
+                    height: 280px;
+                }
+            }
+            &--info {
+                height: calc(440px - 280px);
+                background-color: abstracts.$color-nitro-pink;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                h3, p {
+                    margin: 0;
+                }
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+                :first-child {
+                    text-align: left;
+                }
+                :nth-child(3) {
+                    text-align: right;
+                }
+                &--price {
+                    p {
+                        color: abstracts.$color-nitro-blue;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                    }
+                }    
+            }
+        }
+    }
 }
 
 .discount-section{
     width: 90%;
-    padding: 0 20px 0 20px;
+    padding: 1rem;
     background-color: abstracts.$color-graphite;
     color: white;
     text-align: center;
-}
-
-.discount-section__text {
-    font-size: 45px;
-    margin: 0;
-}
-
-.discount-text-regular {
-    font-weight: 400;
-}
-
-.discount-text-bold {
-    font-weight: 700;
+    &__text {
+        
+        &--regular{
+            font-size: 45px;
+            margin: 0;
+        }
+        &--bold {
+            font-size: 45px;
+            font-weight: 700;
+        }
+    }
 }
 
 .footer {
     background-color: abstracts.$color-nitro-pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    &__opening-time {
+        &--days {
+            font-weight: bold;
+        }
+    }
 }
 
-.operation-hours__days {
-    font-weight: bold;
-}
