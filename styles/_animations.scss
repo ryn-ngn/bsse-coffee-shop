@@ -1,0 +1,51 @@
+@use "abstracts";
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flashing {
+  0% {
+    background: abstracts.$color-nitro-blue;
+    color: white;
+  }
+  25% {
+    background: abstracts.$color-graphite;
+    color: white;
+  }
+  50% {
+    background: abstracts.$color-nitro-pink;
+    color: black;
+  }
+  75% {
+    background: abstracts.$color-light-gray;
+    color: black;
+  }
+  100% {
+    background: olive;
+    color: black;
+  }
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -28,9 +28,11 @@
                 <p>
                     The word “coffee” has roots in several languages. In Yemen it earned the name qahwah, which was originally a romantic term for wine. It later became the Turkish kahveh, then Dutch koffie and finally coffee in English.
                 </p>
-                <button onclick="window.location.href='./pages/menu.html';">
-                    SHOP NOW
-                </button>
+                <div class="btn-ctn">
+                    <button onclick="window.location.href='./pages/menu.html';">
+                        SHOP NOW
+                    </button>
+                </div>
             </div>
             <div class="header__info-box--image">
                 <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag"/>
@@ -38,85 +40,125 @@
         </section>
     </header>
     <body>
-        
-        <section class="product-list">
-            <h2>Our Products</h2>
+        <section class="products">
+            <h2 class="products__heading">Our Products</h2>
             
-            <div class="product-list__product-cards">
-                <article class="product-list__product-card">
-                    <div class="product-list__product-card--image">
+            <div class="products__body">
+                <article class="products__body--product">
+                    <div class="products__body--product--image">
                         <img src="./assets/images/coffeebeans.png" alt="coffee bean">
                     </div>
-                    <div class="product-list__product-card--text-content">
-                        <h3 class="product-list__product-card--name">Coffee Beans</h3>
-                        <p>Pack of 3</p>
-                        <p class="product-list__product-card--price text__regular--price-tag">$18.99</p>
+                    <div class="products__body--product--info">
+                        <div class="products__body--product--info--non-price">
+                            <h3 >Coffee Beans</h3>
+                            <p>Pack of 3</p>
+                        </div>
+                        <div class="products__body--product--info--price">
+                            <p >$19</p>
+                        </div>
                     </div>
                 </article>
         
-                <article class="product-list__product-card">
-                    <div class="product-list__product-card--image" >
+                <article class="products__body--product">
+                    <div class="products__body--product--image" >
                         <img src="./assets/images/coldbrew.png" alt="cold brew">
                     </div>
-                    <div class="product-list__product-card--text-content">
-                        <h3 class="product-list__product-card--name">Cold Brew</h3>
-                        <p>1 can</p>
-                        <p class="product-list__product-card--price text__regular--price-tag">$4.99</p>
+                    <div class="products__body--product--info">
+                        <div class="products__body--product--info--non-price">
+                            <h3 class="products__body--product--name">Cold Brew</h3>
+                            <p>1 can</p>
+                        </div>
+                        <div class="products__body--product--info--price">
+                            <p >$5</p>
+                        </div>
                     </div>
                 </article>
         
-                <article class="product-list__product-card">
-                    <div class="product-list__product-card--image" >
+                <article class="products__body--product">
+                    <div class="products__body--product--image" >
                         <img src="./assets/images/inhousebrew.png" alt="in-house brew">
                     </div>
-                    <div class="product-list__product-card--text-content">
-                        <h3 class="product-list__product-card--name">In-house Brew</h3>
-                        <p>1 cup</p>
-                        <p class="product-list__product-card--price text__regular--price-tag">$2.99</p>
+                    <div class="products__body--product--info">
+                        <div class="products__body--product--info--non-price">
+                            <h3 class="products__body--product--name">In-house Brew</h3>
+                            <p>1 cup</p>
+                        </div>
+                        <div class="products__body--product--info--price">
+                            <p >$3</p>
+                        </div>
                     </div>
                 </article>
             </div>
-    
-            <button onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
+            
+            <div class="products__button">
+                <div class="btn-ctn">
+                    <button onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
+                </div>
+            </div>
         </section>
-    
+        
+        <section class="about-our-beans">
+            <div class="about-our-beans__desc">
+                <h2>We're Different</h2>
+                <p>We grow and roast our own beans. Every bean, every cup, every step of the way, we strive for excellence</p>
+                <div class="about-our-beans__desc--icons">
+                    <img class="icon" src="./assets/logos/planting.svg" alt="plants icon">
+                    <img class="icon" src="./assets/logos/coffee-beans.svg" alt="beans icon">
+                    <img class="icon" src="./assets/logos/isolated-coffee-mug-outline-vector-19518812.jpg" alt="coffee mug icon">
+                </div>
+                <div class="btn-ctn">
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="about-our-beans__image--outer">
+                <div class="about-our-beans__image--inner">
+                    <img  src="./assets/images/tiltedcan.png">
+                </div>
+            </div>
+        </section>
+
         <section class="discount-section">
-            <p class="discount-section__text discount-text-regular">
+            <p class="discount-section__text--regular">
                 Get 20% off your first order with code: 
-                <span class="discount-section__text discount-text-bold">FirstNitro</span>
+                <span class="discount-section__text--bold">FirstNitro</span>
             </p>
         </section>
     </body>
 
     <footer class="footer">
-        <div class="address">
-            <h3 class="footer__heading">Address</h3>
-            <p>503 Broadway Penthouse</p>
-            <p>New York</p>
+        <div class="footer__content">
+            <div class="footer__address">
+                <h3 class="footer__heading3">Address</h3>
+                <p>503 Broadway Penthouse</p>
+                <p>New York</p>
+            </div>
+    
+            <div class="footer__opening-time">
+                <h3 class="footer__heading3">Hours</h3>
+                <p>
+                    <span class="footer__opening-time--days">Monday - Friday</span>: 9am-7pm
+                </p>
+                <p>
+                    <span class="footer__opening-time--days">Saturday - Sunday</span>: 10am-5pm
+                </p>
+            </div>
+    
+            <div class="footer__social">
+                <h3 class="footer__heading3">Social</h3>
+                <a href="https://facebook.com"><img class="icon" src="./assets/logos/Facebook-Icon.svg" alt="facebook"></a>
+                <a href="https://yelp.com"><img class="icon" src="./assets/logos/Yelp-Icon.svg" alt="yelp"></a>
+                <a href="https://instagram.com"><img class="icon" src="./assets/logos/Instagram-Icon.svg" alt="instagram"></a>
+            </div>
         </div>
-
-        <div class="operation-hours">
-            <h3 class="footer__heading">Hours</h3>
-            <p>
-                <span class="operation-hours__days">Monday - Friday</span>: 9am-7pm
-            </p>
-            <p>
-                <span class="operation-hours__days">Saturday - Sunday</span>: 10am-5pm
-            </p>
+        
+        <div class="footer__opaque-logo">
+            <img class="footer__opaque-logo--left" src="./assets/logos/coffee-beans-logo-and-footer.svg"
+                alt="opaque coffee beans logo">
+            <img class="footer__opaque-logo--right" src="./assets/logos/coffee-beans-logo-and-footer.svg"
+                alt="opaque coffee beans logo">
         </div>
-
-        <div class="social-division">
-            <h3 class="footer__heading">Social</h3>
-            <a href="https://facebook.com">
-                <img class="icon" src="./assets/logos/Facebook-Icon.svg" alt="facebook">
-            </a>
-            <a href="https://yelp.com">
-                <img class="icon" src="./assets/logos/Yelp-Icon.svg" alt="yelp">
-            </a>
-            <a href="https://instagram.com">
-                <img class="icon" src="./assets/logos/Instagram-Icon.svg" alt="instagram">
-            </a>
-        </div>
+           
+        
     </footer>
 </body>
 </html>

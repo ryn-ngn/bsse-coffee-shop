@@ -1,5 +1,16 @@
 $color-graphite: #393939;
-$color-nitro-blue: #5BACC3;
-$color-nitro-pink: #FFF0ED;
-$color-nitro-gray: #f7f7f7;
+$color-nitro-blue: #5bacc3;
+$color-nitro-pink: #fff0ed;
+$color-light-gray: #f7f7f7;
 $icon-size: 50px;
+
+@mixin center-flex {
+  align-items: center;
+  @include flex-on-spacing-choice(center);
+  align-items: center;
+}
+
+@mixin flex-on-spacing-choice($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+}
