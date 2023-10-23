@@ -59,5 +59,10 @@ p {
       background-color: abstracts.$color-graphite;
       transform: scale(1.05);
     }
+    &:active {
+      transition: 0.1s;
+      top: 0;
+      right: 0;
+    }
   }
 }

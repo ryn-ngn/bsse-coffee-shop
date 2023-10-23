@@ -57,6 +57,11 @@ p {
   background-color: #393939;
   transform: scale(1.05);
 }
+.btn-ctn button:active {
+  transition: 0.1s;
+  top: 0;
+  right: 0;
+}
 
 .header__nav-bar {
   background-color: #fff0ed;
@@ -86,16 +91,58 @@ p {
   padding-left: 40px;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flashing {
+  0% {
+    background: #5bacc3;
+    color: white;
+  }
+  25% {
+    background: #393939;
+    color: white;
+  }
+  50% {
+    background: #fff0ed;
+    color: black;
+  }
+  75% {
+    background: #f7f7f7;
+    color: black;
+  }
+  100% {
+    background: olive;
+    color: black;
+  }
+}
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .header__info-box {
   background-color: #fff0ed;
   padding: 2rem 6rem;
   display: flex;
   justify-content: space-between;
-}
-@media (max-width: 1030px) {
-  .header__info-box {
-    padding: 2rem 2rem;
-  }
 }
 .header__info-box--text {
   width: 40vw;
@@ -103,75 +150,23 @@ p {
   justify-content: center;
   flex-direction: column;
 }
-
-.products {
-  text-align: center;
-  padding: 3rem 0;
-  background-color: #f7f7f7;
-}
-.products__body {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 2rem 0;
+.header__info-box--image:hover {
+  animation: tilt-shaking 1.5s linear infinite;
 }
 @media (max-width: 1030px) {
-  .products__body {
-    flex-wrap: wrap;
+  .header__info-box {
+    padding: 2rem 2rem;
   }
 }
-.products__body--product {
-  min-width: 330px;
-  min-height: 440px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 9px -1px rgb(0, 0, 0);
-  background-color: white;
-  transition: 0.5s;
-}
-@media (max-width: 1030px) {
-  .products__body--product {
-    margin: 1rem 0;
+@media (max-width: 700px) {
+  .header__info-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-}
-.products__body--product:hover {
-  transform: scale(1.05);
-}
-.products__body--product--image {
-  padding: 20px;
-}
-.products__body--product--image img {
-  height: 280px;
-}
-.products__body--product--info {
-  height: 160px;
-  background-color: #fff0ed;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 1rem;
-}
-.products__body--product--info h3,
-.products__body--product--info p {
-  margin: 0;
-}
-.products__body--product--info :first-child {
-  text-align: left;
-}
-.products__body--product--info :nth-child(3) {
-  text-align: right;
-}
-.products__body--product--info--price p {
-  color: #5bacc3;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-.products__button {
-  display: flex;
-  justify-content: center;
+  .header__info-box--image {
+    padding: 2rem 0;
+  }
 }
 
 .about-our-beans {
@@ -207,6 +202,9 @@ p {
   display: flex;
   justify-content: space-around;
 }
+.about-our-beans__image--inner:hover img {
+  animation: rotate 5s linear infinite;
+}
 
 .discount-section {
   width: 90%;
@@ -215,6 +213,7 @@ p {
   background-color: #393939;
   color: white;
   text-align: center;
+  animation: flashing 10s linear infinite alternate;
 }
 .discount-section__text--regular {
   font-size: 45px;
@@ -226,14 +225,34 @@ p {
 }
 
 .footer {
+  margin: 0 -1rem 0 -1rem;
+}
+.footer__content {
   background-color: #fff0ed;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   text-align: center;
 }
-.footer__opening-time--days {
+.footer__content__opening-time--days {
   font-weight: bold;
+}
+.footer__opaque-logo {
+  position: relative;
+}
+.footer__opaque-logo img {
+  opacity: 0.2;
+  width: 8rem;
+}
+.footer__opaque-logo--left {
+  left: -2.5rem;
+  position: absolute;
+  top: -190px;
+}
+.footer__opaque-logo--right {
+  right: -2.5rem;
+  top: -120px;
+  position: absolute;
 }
 
 .products {
